@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAX CALCULATOR</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>TAX CALCULATOR</h1>
+    <div class="cont">
+        <div class="form-container">
+            <form action="">
+                <label for="annualIncome">Enter Gross Annual Income </label>
+
+                <div class="tooltip">
+                <div class="qBtn"><img src="images/quesmark.png" alt="" class="ques"></div>
+                <span class="tooltiptext">Gross Annual Income is your total salary in a year before any reductions.</span></div>
+                
+                <br>
+                <div class="inp-err">
+                    <input type="text" class="grossIncome" id="grossIncome" required placeholder="Enter Gross Annual Income"> 
+                    <div class="error tooltip1"  id="e1">!<span class="tooltiptext err">Enter a number</span></div>
+                </div>
+                <br><br><br>
+
+                <label for="extraIncome">Enter Extra Income</label>
+                <div class="tooltip">
+                    <div class="qBtn"><img src="images/quesmark.png" alt="" class="ques"></div>
+                    <span class="tooltiptext">Extra income is money you earn in addition to your regular paycheck</span></div>
+                    
+                    <br>
+                <div class="inp-err">
+                    <input type="text" class="extraIncome" id="extraIncome" required placeholder="Enter Extra Income">
+                    <div class="error tooltip1"  id="e2">!<span class="tooltiptext err">Enter a number</span></div>
+                </div>
+                
+                <br><br><br>
+                <label for="age">Enter Age Group </label>
+                <div class="tooltip">
+                    <div class="qBtn"><img src="images/quesmark.png" alt="" class="ques"></div>
+                    <span class="tooltiptext">Your age group</span></div>
+                    
+                    <br>
+                <select name="age" id="age" required>
+                    <option value=""></option>
+                    <option value="less40"> &lt; 40</option>
+                    <option value="40to60">&ge; 40 & &lt; 60</option>
+                    <option value="greater60"> &ge; 60</option>
+                </select>
+                <br><br><br>
+                <label for="deductions">Enter Total Applicable Deductions</label>
+                <div class="tooltip">
+                    <div class="qBtn"><img src="images/quesmark.png" alt="" class="ques"></div>
+                    <span class="tooltiptext">Gross Salary - Deductions = Taxable Income</span></div>
+                    <br>
+                
+                <div class="inp-err">
+                    <input type="text" class="deductions" id="deductions" required placeholder="Enter Total Applicable Deductions">
+                    <div class="error tooltip1"  id="e3">!<span class="tooltiptext err">Enter a number</span></div>
+                </div>
+                <br><br><br>
+                <button type="submit" class="submit">SUBMIT</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="result" class="resultDec output">
+            <p></p>
+            <button class="closeBtn">CLOSE</button>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
